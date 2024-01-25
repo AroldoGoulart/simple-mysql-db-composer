@@ -16,3 +16,10 @@ services:
      - ./.database:/var/lib/mysql
     cpus: 4
     mem_limit: 16g
+    networks:
+      - host
+
+networks:
+  host:
+    name: host
+    external: true
