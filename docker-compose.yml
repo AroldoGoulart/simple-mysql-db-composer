@@ -16,3 +16,4 @@ services:
       - ./.database:/var/lib/mysql
     cpus: 4
     mem_limit: 16g
+    network_mode: "host"        
