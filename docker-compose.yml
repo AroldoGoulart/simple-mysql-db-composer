@@ -10,9 +10,6 @@ services:
       MYSQL_ROOT_USER: ${MYSQL_USER}
       MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
       MYSQL_ROOT_HOST: '%'
-    ports:
-      - 3306:3306
+    network_mode: host  # Configura o contêiner para usar o modo de rede host
     volumes:
       - ./.database:/var/lib/mysql
-    cpus: 4
-    mem_limit: 16g
